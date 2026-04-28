@@ -5,6 +5,7 @@
     font-family: "open sans" sans-serif;
 }
 
+/* Backgroung-image positioning of center to capture the full image. */
 .page-hero-intro {
     margin: 3rem 2rem;
     height: 70vh;
@@ -17,8 +18,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;  
 }
 
 .page-hero-intro p {
@@ -46,14 +46,14 @@
     border-radius: 5rem;
     width: 100%;
     max-width: 70%;
-    background-color: greenyellow;
-    overflow-y: auto;
+    background-color: greenyellow; 
     text-align: center;
     line-height: 1.7;
 }
 
+/* used the border-style:groove to achieve the square stuff inside the History */
 .history div:hover {
-    border-style: groove;   <!-- used the border-style:groove to achieve the square stuff inside the class below--> 
+    border-style: groove; 
 }
 
 .mission {
@@ -94,10 +94,10 @@
     transition: 0.3s ease, box-shadow 0.3s ease ;
 }
 
+/* for the shadow effect in the box */
 .team-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-
 }
 
 .team-card img {
@@ -118,7 +118,8 @@
 .team-card a i:hover {
     border: 1px solid black;
     text-decoration: underline;
-    text-decoration-color: crimson;
+    text-decoration-color: black;
+    background-color: crimson;
 }
 
 .gallery {
@@ -128,12 +129,13 @@
     
 }
 
+/*  for the gallery on its own */
 .gallery-display { 
     display: flex;
     flex-direction: column;    
     gap: 1rem;
     justify-content: center;
-    align-items: center;  <!-- for the gallery on its own-->
+    align-items: center; 
 }
 
 .gallery-display h4,
@@ -149,9 +151,9 @@
     gap: 10px;
 }
 
+/* for the images not topop all the way out */
 .gallery-content div {
-    overflow: hidden;
-    
+    overflow: hidden;  
 }
 
 .gallery-content h5 {
@@ -189,6 +191,7 @@
     animation-delay: 0.5s;
 }
 
+/* For the sliding effect */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -208,8 +211,9 @@
     animation: slideIn 0.9s ease forwards;
 }
 
+/* pop-out when hovered on */
 .gallery-content img:hover {
-   transform: scale(1.10);
+    scale: 1.05;
 }
 
 .awards {
@@ -236,19 +240,7 @@
 
 /* RESPONSIVE */
 @media(max-width:768px){
-.history-mission-grid,
-.values-grid,
-.team-grid{
+.team-mates{
 grid-template-columns:1fr;
 }
-
-.stats{
-flex-direction:column;
-text-align:center;
-gap:20px;
-}
-
-.hero-content h1 {
-font-size:50px;
-font-family: "Montserrat", sans-serif;
 }
